@@ -1,5 +1,5 @@
 # ==============================================================================
-# 🔥 RENDER.COM BLUEPRINT SPECIFICATION (v1.0)
+# 🔥 RENDER.COM BLUEPRINT SPECIFICATION (v2.0)
 # Project: JTV Pro Smart Engine • Developed By: Kobir Shah
 # Documentation: https://render.com/docs/blueprint-spec
 # ==============================================================================
@@ -13,7 +13,7 @@ services:
     branch: main
     buildCommand: chmod +x scripts/start.sh && pip install -r requirements.txt
     startCommand: python3 app.py
-    healthCheckPath: /status
+    healthCheckPath: /health # 0ms Ultra-Lite Healthcheck (Zero 502 Bad Gateway)
     autoDeploy: true
     envVars:
       - key: PORT

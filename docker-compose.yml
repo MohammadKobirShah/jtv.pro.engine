@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  jtv-pro:
+    build: .
+    container_name: jtv-pro-engine
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - TZ=Asia/Dhaka
+      - DEVELOPER=Kobir Shah
+    volumes:
+      - ./data:/app/data

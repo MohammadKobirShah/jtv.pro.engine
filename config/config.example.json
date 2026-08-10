@@ -1,0 +1,13 @@
+{
+  "developer": "Kobir Shah",
+  "project_name": "JTV Pro Smart Engine",
+  "version": "6.0.0 VIP Edition",
+  "base_url": "https://game.denver69.fun/Jtv/index.php",
+  "extend_url": "https://game.denver69.fun/Jtv/index.php?e=16fa4fd95b8badd6df7c5e6532b9101106",
+  "epg_url": "https://whythishome.github.io/epg/guides/dishtv.in_en.xml.gz",
+  "server_host": "0.0.0.0",
+  "server_port": 8080,
+  "timezone": "Asia/Dhaka",
+  "check_interval_seconds": 180,
+  "renew_before_expire_hours": 12
+}

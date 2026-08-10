@@ -1,0 +1,26 @@
+# ==============================================================================
+# 🔥 RENDER.COM BLUEPRINT SPECIFICATION (v1.0)
+# Project: JTV Pro Smart Engine • Developed By: Kobir Shah
+# Documentation: https://render.com/docs/blueprint-spec
+# ==============================================================================
+
+services:
+  - type: web
+    name: jtv-pro-engine
+    runtime: python
+    region: singapore       # Lowest latency region for South Asia (Bangladesh / India)
+    plan: free              # Supports free, starter, standard, etc.
+    branch: main
+    buildCommand: chmod +x scripts/start.sh && pip install -r requirements.txt
+    startCommand: python3 app.py
+    healthCheckPath: /status
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: TZ
+        value: Asia/Dhaka
+      - key: DEVELOPER
+        value: Kobir Shah
+      - key: PYTHON_VERSION
+        value: 3.11.9
